@@ -12,5 +12,8 @@
 
 .navbar_logo {
     margin-right: auto;
+}
+
+.navbar img {
     width: 120px;
 }
