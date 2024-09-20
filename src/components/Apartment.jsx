@@ -3,7 +3,7 @@ import "./Apartment.css";
 
 function Apartment() {
     return (
-        <div className='apartment'>Titre de la location</div>
+        <div className='apartment'><div className='apartment_subtitle'>Titre de la location</div></div>
     )
 }
 

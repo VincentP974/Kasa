@@ -1,13 +1,13 @@
 .navbar {
+
     display: flex;
     align-items: center;
-    padding: 1rem 0rem;
     color: #000000;
     font-weight: bold;
     gap: 2rem;
-    width: 90%;
+    width: 86%;
     margin: auto;
-
+    margin-top: 3rem;
 }
 
 .navbar_logo {
@@ -15,5 +15,13 @@
 }
 
 .navbar img {
-    width: 120px;
+    width: 210.5px;
+}
+
+@media screen and (width <=768px) {
+    .navbar {
+        width: 90%;
+        margin-top: 1rem;
+    }
+
 }

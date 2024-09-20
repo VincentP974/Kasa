@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 1.5625rem;
-    width: 90%;
+    width: 100%;
     min-height: 223px;
     color: white;
     margin: auto;
@@ -26,4 +26,16 @@
     border-radius: 1.5625rem;
     z-index: -1;
     /* La superposition et l'image de fond restent derrière le contenu */
+}
+
+.banner h1 {
+    font-weight: 700;
+    font-size: 48px;
+}
+
+@media screen and (width <=768px) {
+    .banner h1 {
+        width: 70%;
+    }
+
 }

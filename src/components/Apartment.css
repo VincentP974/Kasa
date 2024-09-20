@@ -1,5 +1,27 @@
 .apartment {
     background-color: #FF6060;
     border-radius: 10px;
-    flex-basis: 30%;
+    flex-basis: 27.5%;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.apartment_subtitle {
+    width: 40%;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+@media screen and (width <=768px) {
+    .apartment {
+        flex-basis: 100%;
+        min-height: 255px;
+    }
+
+    .apartment_subtitle {
+        width: 21%;
+    }
+
 }
