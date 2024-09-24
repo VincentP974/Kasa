@@ -1,0 +1,34 @@
+.footer {
+
+    background-color: black;
+    color: white;
+    text-align: center;
+    min-height: 209px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (width <=768px) {
+        & .logo {
+            justify-content: center;
+            margin: 2rem 0;
+            padding-top: 0;
+            gap: 2rem;
+            padding-bottom: 0;
+
+        }
+
+        & text {
+            width: 22%;
+        }
+
+    }
+
+    & .logo {
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+    }
+
+
+}

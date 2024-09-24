@@ -2,12 +2,12 @@
     width: 86%;
     margin: auto;
     margin-top: 3rem;
-}
 
-@media screen and (width <=768px) {
-    .main {
+    @media screen and (width <=768px) {
+
         width: 90%;
         margin-top: 2rem;
-    }
 
+
+    }
 }
