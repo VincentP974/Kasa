@@ -14,10 +14,10 @@
     }
 
     @media screen and (width <=768px) {
-        .apartment {
-            flex-basis: 100%;
-            min-height: 255px;
-        }
+
+        flex-basis: 100%;
+        min-height: 410px;
+
 
         &.subtitle {
             width: 21%;

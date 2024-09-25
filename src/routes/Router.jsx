@@ -6,6 +6,7 @@ import Navbar from '../Layout/Navbar.jsx';
 import Main from '../Layout/Main.jsx';
 import { ErrorPageNotFound } from "../Pages/ErrorPageNotFound.jsx";
 import About from '../Pages/About.jsx';
+import { ApartmentPage } from '../Pages/ApartmentPage.jsx';
 
 // Layout avec navbar et footer
 const HeaderFooterLayout = () => {
@@ -33,7 +34,7 @@ export const router = createBrowserRouter([
             {
                 path: "/locations",
                 element: (<Main>
-                    <h1>Nos appartements</h1>
+                    <ApartmentPage />
                 </Main>) // Page "locations"
             },
             {
