@@ -1,8 +1,9 @@
 import React from 'react'
+import AboutBaner from '../Layout/AboutBaner'
 
 function About() {
     return (
-        <div>About</div>
+        <AboutBaner />
     )
 }
 
