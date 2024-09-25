@@ -15,8 +15,10 @@
     box-shadow: 0px 4px 5px #0000005c;
 
     @media screen and (width <=768px) {
-        .banner h1 {
-            width: 70%;
+        h1 {
+            width: 73%;
+            font-size: 30px;
+
         }
 
     }
