@@ -9,8 +9,10 @@ function HomePage() {
   return (
     <div>
       <Main>
-        <Banner />
-        <ApartmentGrid />
+        <>
+          <Banner />
+          <ApartmentGrid />
+        </>
       </Main>
     </div>
   );

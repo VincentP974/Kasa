@@ -12,6 +12,8 @@
     @media screen and (width <=768px) {
         width: 90%;
         margin-top: 1rem;
+        text-transform: uppercase;
+        font-weight: 500;
     }
 
     &>*:first-child {
