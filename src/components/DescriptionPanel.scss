@@ -1,4 +1,6 @@
-    .apartment_description {
+    .description_panel {
+        @media screen and (width <=768px) {}
+
         .description_header {
             background-color: #FF6060;
             color: white;

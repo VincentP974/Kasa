@@ -1,12 +1,18 @@
 import React from 'react'
 import AboutBaner from '../Layout/AboutBaner'
-import { ApartmentDescription } from '../components/ApartmentDescription'
+import { DescriptionPanel } from '../components/DescriptionPanel'
+import './About.scss'
 
 function About() {
     return (
         <>
             <AboutBaner />
-            <ApartmentDescription />
+            <div className="about_container">
+                <DescriptionPanel />
+                <DescriptionPanel />
+                <DescriptionPanel />
+                <DescriptionPanel />
+            </div>
         </>
     )
 }

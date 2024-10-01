@@ -1,5 +1,5 @@
 import React from 'react'
-import { ApartmentDescription } from "../components/ApartmentDescription.jsx"
+import { DescriptionPanel } from "../components/DescriptionPanel.jsx"
 import './ApartmentPage.scss'
 import { ApartmentHeader } from "../components/ApartmentHeader.jsx"
 
@@ -12,8 +12,8 @@ export function ApartmentPage() {
             </div>
             <ApartmentHeader />
             <div className="apartment_informations">
-                <ApartmentDescription />
-                <ApartmentDescription />
+                <DescriptionPanel />
+                <DescriptionPanel />
             </div>
 
 
