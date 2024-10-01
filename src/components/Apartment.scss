@@ -1,25 +1,28 @@
 .apartment {
-    background-color: #FF6060;
+    background-image: url('src/assets/images/imgApropos.png');
+    background-size: cover;
     border-radius: 10px;
     flex-basis: 27.5%;
     color: #FFFFFF;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
+    min-height: 340px;
+    flex-direction: column;
+    justify-content: end;
+
 
     & .subtitle {
         width: 40%;
         margin-bottom: 1rem;
         margin-left: 1rem;
+
     }
 
     @media screen and (width <=768px) {
 
         flex-basis: 100%;
-        min-height: 410px;
 
 
-        &.subtitle {
+        .subtitle {
             width: 21%;
         }
 

@@ -4,10 +4,11 @@ import { Link } from "react-router-dom";
 
 function Apartment() {
     return (
-        <div className='apartment'>
-            <Link to="/locations">
+        <Link to="/locations">
+            <div className='apartment'>
                 <div className='subtitle'>Titre de la location</div>
-            </Link></div>
+            </div>
+        </Link>
     )
 }
 

@@ -11,9 +11,21 @@
     justify-content: center;
     gap: 4rem;
 
+    &>* {
+        width: 100%;
+        max-width: 340px;
+
+        @media screen and (width <=882px) {
+            max-width: 600rem
+        }
+
+        @media screen and (width <=768px) {
+            max-width: 600rem
+        }
+    }
+
     @media screen and (width <=768px) {
 
-        justify-content: center;
         background-color: white;
         margin: 2rem 0;
         padding-top: 0;
