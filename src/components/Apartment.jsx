@@ -2,14 +2,19 @@ import React from 'react';
 import "./Apartment.scss";
 import { Link } from "react-router-dom";
 
-function Apartment() {
+function Apartment(props) {
     return (
-        <Link to="/locations">
+        <Link to="/locations"
+            state={{
+                apartmentId: props.id
+            }}>
+
             <div className='apartment'>
-                <div className='subtitle'>Titre de la location</div>
+                <img src={props.imageUrl} alt='' />
+                <div className='subtitle'>{props.title}</div>
             </div>
         </Link>
-    )
+    );
 }
 
-export default Apartment
+export default Apartment;

@@ -1,5 +1,4 @@
 .apartment {
-    background-image: url('src/assets/images/imgApropos.png');
     background-size: cover;
     border-radius: 10px;
     flex-basis: 27.5%;
@@ -8,12 +7,23 @@
     min-height: 340px;
     flex-direction: column;
     justify-content: end;
+    position: relative;
+
+    img {
+        width: 100%;
+        min-height: 340px;
+        object-fit: cover;
+        border-radius: 1rem;
+        filter: brightness(0.8)
+    }
 
 
     & .subtitle {
         width: 40%;
         margin-bottom: 1rem;
         margin-left: 1rem;
+        position: absolute;
+
 
     }
 
