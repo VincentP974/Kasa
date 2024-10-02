@@ -37,8 +37,8 @@ export function ApartmentPage() {
             <ImageBanner imageUrl={selectedLocation.cover} />
             <ApartmentHeader selectedLocation={selectedLocation} />
             <div className="apartment_informations">
-                <DescriptionPanel title="Description" />
-                <DescriptionPanel title="Equipements" />
+                <DescriptionPanel title="Description" content={selectedLocation.description} />
+                <DescriptionPanel title="Equipements" content={selectedLocation.equipments.map(eq => <li>{eq}</li>)} />
             </div>
         </div>
     );
