@@ -1,11 +1,11 @@
 import React from 'react'
 import "./DescriptionPanel.scss"
 
-export function DescriptionPanel() {
+export function DescriptionPanel(props) {
     return (
         <div className="description_panel">
             <p className='description_header'>
-                <span>Description</span>
+                <span>{props.title}</span>
                 <i class="fa-solid fa-chevron-down"></i>
             </p>
             <p className='description_content'>Lorem ipsum dolor sit amet consectetur adipisicing elit.

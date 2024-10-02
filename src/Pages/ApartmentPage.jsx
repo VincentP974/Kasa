@@ -35,10 +35,10 @@ export function ApartmentPage() {
         <div className='Apartment-page'>
             {/* Afficher les détails de l'appartement une fois que les données sont chargées */}
             <ImageBanner imageUrl={selectedLocation.cover} />
-            <ApartmentHeader />
+            <ApartmentHeader selectedLocation={selectedLocation} />
             <div className="apartment_informations">
-                <DescriptionPanel />
-                <DescriptionPanel />
+                <DescriptionPanel title="Description" />
+                <DescriptionPanel title="Equipements" />
             </div>
         </div>
     );

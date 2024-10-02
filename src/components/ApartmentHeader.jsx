@@ -1,32 +1,36 @@
 import React from 'react'
 import "./ApartmentHeader.scss"
 
-export function ApartmentHeader() {
+export function ApartmentHeader(props) {
+    const { selectedLocation } = props;
+    const { name } = selectedLocation.host;
+    const [firstName, lastName] = name.split(" ");
     return (
         <div className="apartment_header">
             <div className="apartment_title">
-                <h1> Cosy loft on Canal Saint Martin</h1>
-                <h2>Paris Ile de France</h2>
+                <h1> {selectedLocation.title}</h1>
+                <h2>{selectedLocation.location}</h2>
                 <div className="tags">
-                    <span>Cozy</span>
-                    <span>Canal</span>
-                    <span>Paris 10</span>
+                    {selectedLocation.tags.map((tag) => (
+                        <span key={tag}>{tag}</span>
+                    )
+                    )}
                 </div>
             </div>
             <div className="apartment_owner">
                 <div className="apartment_owner_details">
                     <h3>
-                        <span>Alexandre</span>
-                        <span>Dumas</span>
+                        <span>{firstName}</span>
+                        <span>{lastName}</span>
                     </h3>
-                    <div className="apartment_owner_badge"></div>
+                    <div className="apartment_owner_badge">
+                        <img src={selectedLocation.host.picture} />
+                    </div>
                 </div>
                 <div className="apartment_owner_stars">
-                    <span className='on'><i class="fa-solid fa-star"></i></span>
-                    <span className='on'><i class="fa-solid fa-star"></i></span>
-                    <span className='on'><i class="fa-solid fa-star"></i></span>
-                    <span className='off'><i class="fa-solid fa-star"></i></span>
-                    <span className='off'><i class="fa-solid fa-star"></i></span>
+                    {[1, 2, 3, 4, 5].map((num) => (
+                        <span key={num} className={props.selectedLocation.rating >= num ? "on" : ""}><i class="fa-solid fa-star"></i></span>
+                    ))}
                 </div>
             </div>
 
