@@ -1,6 +1,7 @@
     .description_panel {
         flex-basis: 50%;
         overflow: hidden;
+        margin-bottom: 10px;
 
         & .description_content {
             margin-inline: 1.5rem;
@@ -17,6 +18,7 @@
                 max-height: 1000px; // Ajustez selon la taille de votre contenu
                 opacity: 1;
                 transform: translateY(0);
+                margin-bottom: 3rem;
             }
 
 
@@ -41,9 +43,9 @@
             color: white;
             font-weight: 700;
             font-size: 18px;
-            padding-left: .5rem;
-            border-radius: .7rem;
-            padding: .5rem .7rem;
+            padding-left: 0.5rem;
+            border-radius: 0.5rem;
+            padding: 0.6rem 0.7rem;
             display: flex;
             justify-content: space-between;
             align-items: center;

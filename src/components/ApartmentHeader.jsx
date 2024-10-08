@@ -5,6 +5,10 @@ export function ApartmentHeader(props) {
     const { selectedLocation } = props;
     const { name } = selectedLocation.host;
     const [firstName, lastName] = name.split(" ");
+
+    if (!selectedLocation) {
+        return null;  // On ne retourne rien tant que selectedLocation n'est pas prêt
+    }
     return (
         <div className="apartment_header">
             <div className="apartment_title">

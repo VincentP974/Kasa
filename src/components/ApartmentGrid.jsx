@@ -14,10 +14,15 @@ function ApartmentGrid() {
             .catch(console.error);
     }
 
+    // Si les appartements ne sont pas encore chargés, on peut afficher un message de chargement ou un spinner.
+    if (apartments.length === 0) {
+        return <div>Loading...</div>;
+    }
+
     return (
         <div className='grid'>
             {apartments.map((apartment) => (
-                <Apartment title={apartment.title} imageUrl={apartment.cover} id={apartment.id} />
+                <Apartment title={apartment.title} imageUrl={apartment.cover} id={apartment.id} key={apartment.id} />
             ))}
         </div>
     )

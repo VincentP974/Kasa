@@ -14,8 +14,8 @@ export function ImageBanner({ pictures }) {
 
     const moveToPrevious = () => {
         const newCurrentPicture = currentPicture - 1;
-        if(newCurrentPicture < 0){
-            setCurrentPicture(pictures.length -1);
+        if (newCurrentPicture < 0) {
+            setCurrentPicture(pictures.length - 1);
             return;
         }
         setCurrentPicture(currentPicture - 1);
@@ -24,22 +24,26 @@ export function ImageBanner({ pictures }) {
     return (
         <div className='apart-banner'>
             <div className='image_container'>
-            {pictures.map((pic, i) => (
-                <img 
-                    key={i} // Utilisation correcte de la clé ici
-                    src={pic} 
-                    alt={`Apartment picture ${i + 1}`} 
-                    className={getClassName(i)} 
-                />
-            ))}
+                {pictures.map((pic, i) => (
+                    <img
+                        key={i} // Utilisation correcte de la clé ici
+                        src={pic}
+                        alt={`Apartment picture ${i + 1}`}
+                        className={getClassName(i)}
+                    />
+                ))}
             </div>
             {/* Optionnel: Ajouter un bouton pour faire défiler les images */}
             <button className="btn btn-previous" onClick={moveToPrevious}>
                 <i className="fas fa-chevron-left"></i>
-                </button>
+            </button>
             <button className="btn btn-next" onClick={moveToNext}>
-            <i className="fas fa-chevron-right"></i>
-                </button>
+                <i className="fas fa-chevron-right"></i>
+            </button>
+            <span className="slide-counter">
+                {currentPicture + 1} / {pictures.length}
+            </span>
+
         </div>
     );
 }
