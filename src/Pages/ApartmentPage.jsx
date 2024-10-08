@@ -34,11 +34,14 @@ export function ApartmentPage() {
     return (
         <div className='Apartment-page'>
             {/* Afficher les détails de l'appartement une fois que les données sont chargées */}
-            <ImageBanner imageUrl={selectedLocation.cover} />
+            <ImageBanner pictures={selectedLocation.pictures} />
             <ApartmentHeader selectedLocation={selectedLocation} />
             <div className="apartment_informations">
                 <DescriptionPanel title="Description" content={selectedLocation.description} />
-                <DescriptionPanel title="Equipements" content={selectedLocation.equipments.map(eq => <li>{eq}</li>)} />
+                <DescriptionPanel title="Equipements" content={selectedLocation.equipments.map((eq,i) => (
+                    <li key={i}>{eq}</li>
+                    ))} 
+                    />
             </div>
         </div>
     );

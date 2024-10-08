@@ -1,16 +1,25 @@
-import React from 'react'
-import "./DescriptionPanel.scss"
+import React, { useState } from 'react';
+import "./DescriptionPanel.scss";
 
 export function DescriptionPanel(props) {
+    const [isContentVisible, setIsContentVisible] = useState(false);
+
+    // Fonction pour basculer la visibilité du contenu
+    const toggleContent = () => {
+        setIsContentVisible(!isContentVisible);
+    };
+
     return (
         <div className="description_panel">
-            <p className='description_header'>
+            <p className='description_header' onClick={toggleContent}>
                 <span>{props.title}</span>
-                <i class="fa-solid fa-chevron-down"></i>
+                {/* Chevron qui change de direction selon l'état */}
+                <i className={`fa-solid ${isContentVisible ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
             </p>
-            <p className='description_content'>{props.content}
-            </p>
+            {/* Ajout d'une classe dynamique pour gérer les animations */}
+            <div className={`description_content ${isContentVisible ? 'show' : 'hide'}`}>
+                {props.content}
+            </div>
         </div>
-    )
+    );
 }
-
