@@ -5,6 +5,6 @@ import { router } from './routes/Router'; // Importe le router configuré
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} /> {/* Utilise le router que tu as exporté */}
+    <RouterProvider router={router} /> {/* Utilise le router exporté */}
   </React.StrictMode>
 );
