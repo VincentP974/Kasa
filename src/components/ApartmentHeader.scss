@@ -14,11 +14,12 @@
         margin-top: 1rem;
         display: flex;
         flex-direction: column;
+        align-items: center;
 
         @media screen and (width <=768px) {
             flex-direction: row;
             justify-content: space-between;
-            align-items: center;
+
         }
     }
 
@@ -26,9 +27,11 @@
         display: flex;
         gap: .5rem;
         padding-left: 7rem;
+        align-items: center;
 
         @media screen and (width <=768px) {
             order: 1;
+            padding-left: 0;
         }
 
 
@@ -41,6 +44,12 @@
         border-radius: 50%;
         background-color: gray;
 
+        @media screen and (width <=768px) {
+            height: 32px;
+            width: 32px;
+
+        }
+
     }
 
     .apartment_owner_stars {
@@ -52,6 +61,13 @@
 
         * {
             font-size: 1.5rem;
+
+            @media screen and (width <=768px) {
+                font-size: 18px;
+
+            }
+
+
         }
 
         .on {

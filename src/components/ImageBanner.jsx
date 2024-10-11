@@ -21,6 +21,9 @@ export function ImageBanner({ pictures }) {
         setCurrentPicture(currentPicture - 1);
     };
 
+    // Si une seule image, ne pas afficher les boutons ni le compteur
+    const showNavigation = pictures.length > 1;
+
     return (
         <div className='apart-banner'>
             <div className='image_container'>
@@ -33,16 +36,25 @@ export function ImageBanner({ pictures }) {
                     />
                 ))}
             </div>
-            {/* Optionnel: Ajouter un bouton pour faire défiler les images */}
-            <button className="btn btn-previous" onClick={moveToPrevious}>
-                <i className="fas fa-chevron-left"></i>
-            </button>
-            <button className="btn btn-next" onClick={moveToNext}>
-                <i className="fas fa-chevron-right"></i>
-            </button>
-            <span className="slide-counter">
-                {currentPicture + 1} / {pictures.length}
-            </span>
+
+            {/* Boutons de navigation gauche/droite */}
+            {showNavigation && (
+                <>
+                    <button className="btn btn-previous" onClick={moveToPrevious}>
+                        <i className="fas fa-chevron-left"></i>
+                    </button>
+                    <button className="btn btn-next" onClick={moveToNext}>
+                        <i className="fas fa-chevron-right"></i>
+                    </button>
+                </>
+            )}
+
+            {/* Compteur d'images */}
+            {showNavigation && (
+                <div className="slide-counter">
+                    {currentPicture + 1}/{pictures.length}
+                </div>
+            )}
 
         </div>
     );
