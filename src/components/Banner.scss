@@ -15,11 +15,11 @@
     box-shadow: 0px 4px 5px #0000005c;
 
     @media screen and (width <=768px) {
-       justify-content:flex-start;
+        justify-content: flex-start;
 
     }
-   
-   
+
+
 
     &::before {
         content: "";
@@ -38,17 +38,28 @@
     & h1 {
         font-weight: 700;
         font-size: 48px;
-        
-    } 
-    
-    @media screen and (width <=768px) {
+
+    }
+
+    @media screen and (width <=866px) {
         h1 {
-            width: 73%;
-            font-size: 24px;
-            padding-left:1rem;
-            
+            padding-left: 1rem;
+
 
         }
 
     }
+
+    @media screen and (width <=768px) {
+        h1 {
+            width: 73%;
+            font-size: 24px;
+            padding-left: 1rem;
+
+
+        }
+
+    }
+
+
 }
