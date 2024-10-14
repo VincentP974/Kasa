@@ -10,7 +10,7 @@ function Navbar() {
             </div>
         </NavLink>
         <NavLink to="/">
-            Acceuil
+            Accueil
         </NavLink>
         <NavLink to="/about">
             A propos
