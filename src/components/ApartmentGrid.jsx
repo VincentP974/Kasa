@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react'
-import "./ApartmentGrid.scss"
-import Apartment from './Apartment.jsx'
+import React, { useEffect, useState } from 'react';
+import "./ApartmentGrid.scss";
+import Apartment from './Apartment.jsx';
 
 function ApartmentGrid() {
     const [apartments, setApartments] = useState([]);
 
-    useEffect(fetchApartments, []); //useffect avec array vide pour charger le composant une seul fois au chargement de la page
+    useEffect(fetchApartments, []); // useEffect avec array vide pour charger le composant une seule fois au chargement de la page
 
     function fetchApartments() {
-        fetch("/Logements.json")
+        fetch("/Kasa/Logements.json") // Update the path here
             .then((res) => res.json())
             .then((res) => setApartments(res))
             .catch(console.error);
@@ -22,10 +22,15 @@ function ApartmentGrid() {
     return (
         <div className='grid'>
             {apartments.map((apartment) => (
-                <Apartment title={apartment.title} imageUrl={apartment.cover} id={apartment.id} key={apartment.id} />
+                <Apartment
+                    title={apartment.title}
+                    imageUrl={apartment.cover}
+                    id={apartment.id}
+                    key={apartment.id}
+                />
             ))}
         </div>
-    )
+    );
 }
 
-export default ApartmentGrid
+export default ApartmentGrid;
