@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBrowserRouter, Outlet } from 'react-router-dom';
+import { createHashRouter, RouterProvider, Outlet } from 'react-router-dom';
 import HomePage from '../Pages/HomePage.jsx';
 import Footer from '../Layout/Footer.jsx';
 import Navbar from '../Layout/Navbar.jsx';
@@ -22,7 +22,7 @@ const HeaderFooterLayout = () => {
 };
 
 // Configuration du router
-export const router = createBrowserRouter([
+const router = createHashRouter([
     {
         element: <HeaderFooterLayout />, // Layout général
         errorElement: <ErrorPageNotFound />, // 404 sans navbar/footer
@@ -33,17 +33,27 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/locations",
-                element: (<Main>
-                    <ApartmentPage />
-                </Main>) // Page "locations"
+                element: (
+                    <Main>
+                        <ApartmentPage />
+                    </Main>
+                ) // Page "locations"
             },
             {
                 path: "/about",
-                element: (<Main>
-                    <About />
-                </Main>
+                element: (
+                    <Main>
+                        <About />
+                    </Main>
                 ) // Page "about"
             }
         ],
     },
 ]);
+
+// App component
+function App() {
+    return <RouterProvider router={router} />;
+}
+
+export default App;
