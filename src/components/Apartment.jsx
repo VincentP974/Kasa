@@ -4,10 +4,7 @@ import { Link } from "react-router-dom";
 
 function Apartment(props) {
     return (
-        <Link to="/locations"
-            state={{
-                apartmentId: props.id
-            }}>
+        <Link to={`/locations/${props.id}`}>
 
             <div className='apartment'>
                 <img src={props.imageUrl} alt='' />
