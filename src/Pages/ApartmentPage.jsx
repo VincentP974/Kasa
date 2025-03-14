@@ -12,7 +12,7 @@ export function ApartmentPage() {
     useEffect(fetchApartmentData, [id]); // Fetch data when the ID changes
 
     function fetchApartmentData() {
-        fetch("/Logements.json") // Ensure the path is correct
+        fetch("/Kasa/Logements.json") // Ensure the path is correct
             .then((res) => res.json())
             .then((locations) => {
                 // Find the apartment with the matching ID
