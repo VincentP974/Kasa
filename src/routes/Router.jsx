@@ -56,4 +56,4 @@ function App() {
     return <RouterProvider router={router} />;
 }
 
-export default router;
+export { router, App };
