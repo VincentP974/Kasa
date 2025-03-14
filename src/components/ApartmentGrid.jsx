@@ -8,7 +8,7 @@ function ApartmentGrid() {
     useEffect(fetchApartments, []); // useEffect avec array vide pour charger le composant une seule fois au chargement de la page
 
     function fetchApartments() {
-        fetch("/Logements.json") // Update the path here
+        fetch("/Kasa//Logements.json") 
             .then((res) => res.json())
             .then((res) => setApartments(res))
             .catch(console.error);
